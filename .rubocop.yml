@@ -4,7 +4,7 @@ inherit_mode:
   merge:
     - Include
 
-require:
+plugins:
   - rubocop-capybara
   - rubocop-packaging
   - rubocop-performance
@@ -42,10 +42,16 @@ Capybara/ClickLinkOrButtonStyle:
 Capybara/CurrentPathExpectation:
   Enabled: true
 
+Capybara/FindAllFirst:
+  Enabled: true
+
 Capybara/MatchStyle:
   Enabled: true
 
 Capybara/NegationMatcher:
+  Enabled: true
+
+Capybara/NegationMatcherAfterVisit:
   Enabled: true
 
 Capybara/RedundantWithinFind:
@@ -315,9 +321,15 @@ Performance/UnfreezeString:
 Performance/UriDefaultParser:
   Enabled: true
 
+Performance/ZipWithoutBlock:
+  Enabled: true
+
 Rails/FilePath:
   Enabled: true
   EnforcedStyle: slashes
+
+Rails/RootPathnameMethods:
+  Enabled: true
 
 RSpec/EmptyLineAfterExample:
   Enabled: true
@@ -357,7 +369,7 @@ Layout/IndentationConsistency:
 Layout/IndentationWidth:
   Enabled: true
 
-Naming/PredicateName:
+Naming/PredicatePrefix:
   Enabled: true
 
   ForbiddenPrefixes:
