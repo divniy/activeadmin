@@ -8,7 +8,6 @@ create_file "app/assets/config/manifest.js"
 rails_command "css:install:tailwind"
 # Remove default configuration generated: https://github.com/rails/cssbundling-rails/blob/v1.4.2/lib/install/tailwind/install.rb#L7
 remove_file "app/assets/stylesheets/application.tailwind.css"
-remove_file "tailwind.config.js"
 
 rails_command "importmap:install"
 
