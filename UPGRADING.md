@@ -16,7 +16,7 @@ Then add the npm package and update the `build:css` script.
 
 ```
 yarn add @activeadmin/activeadmin@4.0.0-beta16
-npm pkg set scripts.build:css="npx @tailwindcss/cli -i ./app/assets/stylesheets/active_admin.tailwind.css -o ./app/assets/builds/active_admin.css --minify"
+npm pkg set scripts.build:css="tailwindcss -i ./app/assets/stylesheets/active_admin.css -o ./app/assets/builds/active_admin.css --minify -c tailwind-active_admin.config.js"
 ```
 
 If you are already using Tailwind in your app, then update the `build:css` script to chain the above command to your existing one, e.g. `"npx @tailwindcss/cli ... && npx @tailwindcss/cli ..."`, so both stylesheets are generated.
