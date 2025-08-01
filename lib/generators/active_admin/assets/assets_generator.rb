@@ -8,7 +8,7 @@ module ActiveAdmin
         remove_file "app/assets/stylesheets/active_admin.scss"
         remove_file "app/assets/javascripts/active_admin.js"
         template "active_admin.tailwind.css", "app/assets/stylesheets/active_admin.tailwind.css"
-        template "tailwind.config.js", "tailwind-active_admin.config.js"
+        template "tailwind.config.js", "config/tailwind-active_admin.config.js"
       end
     end
   end
